@@ -115,6 +115,14 @@ function initializeOSTabs() {
         buttons.forEach(button => {
             button.addEventListener('click', function() {
                 const targetOS = this.getAttribute('data-os');
+                const isCurrentlyActive = this.classList.contains('active');
+                
+                // Si la pestaña ya está activa, la deseleccionamos
+                if (isCurrentlyActive) {
+                    this.classList.remove('active');
+                    contents.forEach(content => content.classList.remove('active'));
+                    return;
+                }
                 
                 // Remover clase active de todos los botones y contenidos del grupo
                 buttons.forEach(btn => btn.classList.remove('active'));
@@ -122,7 +130,7 @@ function initializeOSTabs() {
                 
                 // Agregar clase active al botón clickeado y su contenido correspondiente
                 this.classList.add('active');
-                const targetContent = group.parentElement.querySelector(`[data-os-content="${targetOS}"]`);
+                const targetContent = document.getElementById(targetOS);
                 if (targetContent) {
                     targetContent.classList.add('active');
                 }
@@ -148,6 +156,14 @@ function initializeIDETabs() {
         buttons.forEach(button => {
             button.addEventListener('click', function() {
                 const targetIDE = this.getAttribute('data-ide');
+                const isCurrentlyActive = this.classList.contains('active');
+                
+                // Si la pestaña ya está activa, la deseleccionamos
+                if (isCurrentlyActive) {
+                    this.classList.remove('active');
+                    contents.forEach(content => content.classList.remove('active'));
+                    return;
+                }
                 
                 // Remover clase active de todos los botones y contenidos del grupo
                 buttons.forEach(btn => btn.classList.remove('active'));
@@ -155,7 +171,7 @@ function initializeIDETabs() {
                 
                 // Agregar clase active al botón clickeado y su contenido correspondiente
                 this.classList.add('active');
-                const targetContent = group.parentElement.querySelector(`[data-ide-content="${targetIDE}"]`);
+                const targetContent = document.getElementById(targetIDE);
                 if (targetContent) {
                     targetContent.classList.add('active');
                 }
@@ -181,6 +197,14 @@ function initializeProjectTabs() {
         buttons.forEach(button => {
             button.addEventListener('click', function() {
                 const targetProject = this.getAttribute('data-project');
+                const isCurrentlyActive = this.classList.contains('active');
+                
+                // Si la pestaña ya está activa, la deseleccionamos
+                if (isCurrentlyActive) {
+                    this.classList.remove('active');
+                    contents.forEach(content => content.classList.remove('active'));
+                    return;
+                }
                 
                 // Remover clase active de todos los botones y contenidos del grupo
                 buttons.forEach(btn => btn.classList.remove('active'));
@@ -188,7 +212,7 @@ function initializeProjectTabs() {
                 
                 // Agregar clase active al botón clickeado y su contenido correspondiente
                 this.classList.add('active');
-                const targetContent = group.parentElement.querySelector(`[data-project-content="${targetProject}"]`);
+                const targetContent = document.getElementById(targetProject);
                 if (targetContent) {
                     targetContent.classList.add('active');
                 }
@@ -214,6 +238,14 @@ function initializeMethodTabs() {
         buttons.forEach(button => {
             button.addEventListener('click', function() {
                 const targetMethod = this.getAttribute('data-method');
+                const isCurrentlyActive = this.classList.contains('active');
+                
+                // Si la pestaña ya está activa, la deseleccionamos
+                if (isCurrentlyActive) {
+                    this.classList.remove('active');
+                    contents.forEach(content => content.classList.remove('active'));
+                    return;
+                }
                 
                 // Remover clase active de todos los botones y contenidos del grupo
                 buttons.forEach(btn => btn.classList.remove('active'));
@@ -221,7 +253,7 @@ function initializeMethodTabs() {
                 
                 // Agregar clase active al botón clickeado y su contenido correspondiente
                 this.classList.add('active');
-                const targetContent = group.parentElement.querySelector(`[data-method-content="${targetMethod}"]`);
+                const targetContent = document.getElementById(targetMethod);
                 if (targetContent) {
                     targetContent.classList.add('active');
                 }
