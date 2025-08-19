@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación Avanzada - Desarrollo Android</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1><i class="fas fa-mobile-alt"></i> Desarrollo de Aplicaciones Android</h1>
+            <p class="subtitle">Curso de Programación Avanzada - Guía Completa de Tecnologías</p>
+        </div>
+    </header>
+
+    <nav class="nav-tabs">
+        <div class="container">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="tab-buttons" id="tabButtons">
+                <button class="tab-btn active" data-tab="overview">
+                    <i class="fas fa-chart-line"></i>
+                    Panorama General
+                </button>
+                <button class="tab-btn" data-tab="android-native">
+                    <i class="fab fa-android"></i>
+                    Android Nativo
+                </button>
+                <button class="tab-btn" data-tab="flutter">
+                    <i class="fas fa-feather-alt"></i>
+                    Flutter
+                </button>
+                <button class="tab-btn" data-tab="react-native">
+                    <i class="fab fa-react"></i>
+                    React Native
+                </button>
+                <button class="tab-btn" data-tab="capacitor">
+                    <i class="fas fa-globe"></i>
+                    React + Capacitor
+                </button>
+                <button class="tab-btn" data-tab="maui">
+                    <i class="fab fa-microsoft"></i>
+                    .NET MAUI
+                </button>
+                <button class="tab-btn" data-tab="troubleshooting">
+                    <i class="fas fa-tools"></i>
+                    Checklist & Troubleshooting
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Panorama General -->
+            <section id="overview" class="tab-content active">
+                <h2><i class="fas fa-chart-line"></i> Panorama General</h2>
+                <div class="comparison-grid">
+                    <div class="comparison-card">
+                        <h3><i class="fas fa-mobile-alt"></i> Desarrollo Nativo</h3>
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h4><i class="fas fa-check-circle"></i> Ventajas</h4>
+                                <ul>
+                                    <li>Máximo rendimiento y acceso completo a APIs nativas</li>
+                                    <li>Mejor integración con el ecosistema del SO</li>
+                                    <li>Acceso inmediato a nuevas funcionalidades del SO</li>
+                                    <li>Mejor experiencia de usuario (UX/UI nativa)</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h4><i class="fas fa-times-circle"></i> Desventajas</h4>
+                                <ul>
+                                    <li>Desarrollo separado para cada plataforma</li>
+                                    <li>Mayor tiempo y costo de desarrollo</li>
+                                    <li>Necesidad de equipos especializados por plataforma</li>
+                                    <li>Mantenimiento duplicado del código</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tech-stack">
+                            <h4>Tecnologías:</h4>
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Jetpack Compose</span>
+                            <span class="tech-tag">Android Studio</span>
+                        </div>
+                    </div>
+
+                    <div class="comparison-card">
+                        <h3><i class="fas fa-layer-group"></i> Desarrollo Multiplataforma</h3>
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h4><i class="fas fa-check-circle"></i> Ventajas</h4>
+                                <ul>
+                                    <li>Un solo código base para múltiples plataformas</li>
+                                    <li>Desarrollo más rápido y económico</li>
+                                    <li>Mantenimiento centralizado</li>
+                                    <li>Equipo de desarrollo unificado</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h4><i class="fas fa-times-circle"></i> Desventajas</h4>
+                                <ul>
+                                    <li>Posible pérdida de rendimiento</li>
+                                    <li>Limitaciones en acceso a APIs específicas</li>
+                                    <li>Dependencia de frameworks de terceros</li>
+                                    <li>Posibles inconsistencias en UX entre plataformas</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tech-stack">
+                            <h4>Tecnologías:</h4>
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Capacitor</span>
+                            <span class="tech-tag">.NET MAUI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="decision-matrix">
+                    <h3><i class="fas fa-balance-scale"></i> Matriz de Decisión</h3>
+                    <div class="matrix-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Criterio</th>
+                                    <th>Nativo</th>
+                                    <th>Flutter</th>
+                                    <th>React Native</th>
+                                    <th>Capacitor</th>
+                                    <th>.NET MAUI</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Rendimiento</td>
+                                    <td class="excellent">Excelente</td>
+                                    <td class="very-good">Muy Bueno</td>
+                                    <td class="good">Bueno</td>
+                                    <td class="fair">Regular</td>
+                                    <td class="very-good">Muy Bueno</td>
+                                </tr>
+                                <tr>
+                                    <td>Velocidad de Desarrollo</td>
+                                    <td class="fair">Lenta</td>
+                                    <td class="very-good">Muy Rápida</td>
+                                    <td class="very-good">Muy Rápida</td>
+                                    <td class="excellent">Excelente</td>
+                                    <td class="good">Rápida</td>
+                                </tr>
+                                <tr>
+                                    <td>Curva de Aprendizaje</td>
+                                    <td class="fair">Empinada</td>
+                                    <td class="good">Moderada</td>
+                                    <td class="very-good">Suave</td>
+                                    <td class="very-good">Suave</td>
+                                    <td class="good">Moderada</td>
+                                </tr>
+                                <tr>
+                                    <td>Ecosistema</td>
+                                    <td class="excellent">Excelente</td>
+                                    <td class="very-good">Muy Bueno</td>
+                                    <td class="excellent">Excelente</td>
+                                    <td class="good">Bueno</td>
+                                    <td class="good">Bueno</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Android Nativo -->
+            <section id="android-native" class="tab-content">
+                <h2><i class="fab fa-android"></i> Android Nativo (Kotlin + Jetpack Compose)</h2>
+                
+                <div class="explanation-card">
+                    <h4>🔍 ¿Qué es Android Nativo?</h4>
+                    <p>Desarrollo usando las herramientas oficiales de Google para crear aplicaciones específicamente para Android. <strong>Jetpack Compose</strong> es el moderno toolkit de UI declarativo de Android que simplifica y acelera el desarrollo de interfaces nativas.</p>
+                    <div class="tech-highlights">
+                        <h5>✨ Novedades 2024 en Jetpack Compose:</h5>
+                        <ul>
+                            <li><strong>Transiciones de elementos compartidos:</strong> Animaciones fluidas entre pantallas</li>
+                            <li><strong>Animaciones mejoradas:</strong> Nuevas APIs para listas lazy y elementos dinámicos</li>
+                            <li><strong>Mejoras de rendimiento:</strong> Optimizaciones significativas en la compilación</li>
+                            <li><strong>Layouts contextuales:</strong> Mejor adaptación a diferentes tamaños de pantalla</li>
+                            <li><strong>Mejoras de texto:</strong> Nuevas capacidades tipográficas y de formato</li>
+                        </ul>
+                        
+                        <h5>📚 Enlaces oficiales y recursos clave:</h5>
+                        <ul>
+                            <li><strong><a href="https://developer.android.com/studio" target="_blank">Android Studio</a>:</strong> IDE oficial con herramientas completas de desarrollo, emuladores integrados, debugger avanzado, profiler de rendimiento, y plantillas de proyectos. Incluye soporte nativo para Kotlin y Jetpack Compose con preview en tiempo real.</li>
+                            <li><strong><a href="https://developer.android.com/jetpack/compose" target="_blank">Jetpack Compose</a>:</strong> Documentación oficial del toolkit de UI moderno con arquitectura declarativa, catálogo completo de componentes, gestión de estado, sistema de animaciones, y guías de mejores prácticas para desarrollo nativo.</li>
+                            <li><strong><a href="https://developer.android.com/jetpack/compose/tooling" target="_blank">Compose Tooling</a>:</strong> Herramientas especializadas para desarrollo con Compose: preview interactivo, inspector de layout, debugging de recomposiciones, y análisis de rendimiento de UI.</li>
+                            <li><strong><a href="https://github.com/android/compose-samples" target="_blank">Compose Samples</a>:</strong> Repositorio oficial con proyectos de ejemplo que demuestran patrones de diseño, arquitecturas recomendadas, implementaciones avanzadas, y casos de uso reales de Jetpack Compose.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="installation-guide">
+                    <h3><i class="fas fa-download"></i> Instalación de Android Studio</h3>
+                    
+                    <div class="os-tabs">
+                        <button class="os-tab-btn active" data-os="windows">Windows</button>
+                        <button class="os-tab-btn" data-os="macos">macOS</button>
+                        <button class="os-tab-btn" data-os="linux">Linux</button>
+                    </div>
+
+                    <div class="os-content">
+                        <div id="windows" class="os-tab-content active">
+                            <h4><i class="fab fa-windows"></i> Instalación en Windows</h4>
+                            <ol>
+                                <li>Descargar Android Studio desde <a href="https://developer.android.com/studio" target="_blank">developer.android.com/studio</a></li>
+                                <li>Ejecutar el instalador <code>android-studio-xxx-windows.exe</code></li>
+                                <li>Seguir el asistente de instalación (instalar Android SDK, AVD)</li>
+                                <li>Configurar variables de entorno:</li>
+                            </ol>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span>Variables de Entorno - Windows</span>
+                                    <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                                </div>
+                                <pre><code># Agregar al PATH del sistema
+ANDROID_HOME=C:\Users\%USERNAME%\AppData\Local\Android\Sdk
+PATH=%PATH%;%ANDROID_HOME%\platform-tools;%ANDROID_HOME%\tools</code></pre>
+                            </div>
+                        </div>
+
+                        <div id="macos" class="os-tab-content">
+                            <h4><i class="fab fa-apple"></i> Instalación en macOS</h4>
+                            <ol>
+                                <li>Descargar Android Studio desde <a href="https://developer.android.com/studio" target="_blank">developer.android.com/studio</a></li>
+                                <li>Abrir el archivo <code>android-studio-xxx-mac.dmg</code></li>
+                                <li>Arrastrar Android Studio a la carpeta Applications</li>
+                                <li>Configurar variables de entorno en <code>~/.zshrc</code> o <code>~/.bash_profile</code>:</li>
+                            </ol>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span>Variables de Entorno - macOS</span>
+                                    <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                                </div>
+                                <pre><code># Agregar al archivo ~/.zshrc o ~/.bash_profile
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools</code></pre>
+                            </div>
+                        </div>
+
+                        <div id="linux" class="os-tab-content">
+                            <h4><i class="fab fa-linux"></i> Instalación en Linux</h4>
+                            <ol>
+                                <li>Descargar Android Studio desde <a href="https://developer.android.com/studio" target="_blank">developer.android.com/studio</a></li>
+                                <li>Extraer el archivo tar.gz:</li>
+                            </ol>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span>Instalación Linux</span>
+                                    <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                                </div>
+                                <pre><code>tar -xzf android-studio-xxx-linux.tar.gz
+sudo mv android-studio /opt/
+/opt/android-studio/bin/studio.sh</code></pre>
+                            </div>
+                            <ol start="3">
+                                <li>Configurar variables de entorno en <code>~/.bashrc</code>:</li>
+                            </ol>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span>Variables de Entorno - Linux</span>
+                                    <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                                </div>
+                                <pre><code># Agregar al archivo ~/.bashrc
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="setup-guide">
+                    <h3><i class="fas fa-cog"></i> Configuración de SDK y AVD</h3>
+                    <div class="step-by-step">
+                        <div class="step">
+                            <h4><i class="fas fa-step-forward"></i> Paso 1: Configurar SDK</h4>
+                            <p>En Android Studio, ir a <strong>File → Settings → Appearance & Behavior → System Settings → Android SDK</strong></p>
+                            <ul>
+                                <li>Instalar la última versión de Android SDK Platform</li>
+                                <li>Instalar Android SDK Build-Tools</li>
+                                <li>Instalar Google Play Services</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="step">
+                            <h4><i class="fas fa-step-forward"></i> Paso 2: Crear AVD (Android Virtual Device)</h4>
+                            <p>En Android Studio, ir a <strong>Tools → AVD Manager</strong></p>
+                            <ul>
+                                <li>Click en "Create Virtual Device"</li>
+                                <li>Seleccionar un dispositivo (ej: Pixel 4)</li>
+                                <li>Descargar e instalar una imagen del sistema (API 33+)</li>
+                                <li>Configurar y finalizar la creación</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="first-project">
+                    <h3><i class="fas fa-rocket"></i> Primer Proyecto con Jetpack Compose</h3>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Crear Nuevo Proyecto</span>
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                        </div>
+                        <pre><code>1. File → New → New Project
+2. Seleccionar "Empty Compose Activity"
+3. Configurar:
+   - Name: MiPrimeraApp
+   - Package name: com.ejemplo.miprimeraapp
+   - Language: Kotlin
+   - Minimum SDK: API 24
+4. Click "Finish"</code></pre>
+                    </div>
+                </div>
+
+                <div class="resources">
+                    <h3><i class="fas fa-link"></i> Enlaces Oficiales</h3>
+                    <div class="links-grid">
+                        <a href="https://developer.android.com/studio" target="_blank" class="resource-link">
+                            <i class="fas fa-download"></i>
+                            <span>Descargar Android Studio</span>
+                        </a>
+                        <a href="https://developer.android.com/jetpack/compose" target="_blank" class="resource-link">
+                            <i class="fas fa-code"></i>
+                            <span>Documentación Jetpack Compose</span>
+                        </a>
+                        <a href="https://kotlinlang.org/docs/" target="_blank" class="resource-link">
+                            <i class="fas fa-book"></i>
+                            <span>Documentación Kotlin</span>
+                        </a>
+                        <a href="https://developer.android.com/courses" target="_blank" class="resource-link">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Cursos Oficiales Android</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Flutter -->
+            <section id="flutter" class="tab-content">
+                <h2><i class="fas fa-feather-alt"></i> Flutter</h2>
+                
+                <div class="explanation-card">
+                    <h4>🔍 ¿Qué es Flutter?</h4>
+                    <p>Flutter es el toolkit de UI multiplataforma de Google que permite crear aplicaciones nativas para móvil, web y escritorio desde una sola base de código. Utiliza el lenguaje <strong>Dart</strong> y ofrece un rendimiento casi nativo.</p>
+                    <div class="tech-highlights">
+                        <h5>🚀 Características destacadas 2024:</h5>
+                        <ul>
+                            <li><strong>Flutter 3.13+:</strong> Mejoras significativas de rendimiento y nuevos widgets Material 3</li>
+                            <li><strong>Dart 3:</strong> Null safety mejorado y nuevas características del lenguaje</li>
+                            <li><strong>Hot Reload:</strong> Desarrollo ultrarrápido con recarga en caliente</li>
+                            <li><strong>Soporte web y desktop:</strong> Aplicaciones multiplataforma completas</li>
+                            <li><strong>Integración ML:</strong> Soporte nativo para machine learning y Firebase</li>
+                            <li><strong>Comunidad activa:</strong> Ecosistema robusto con miles de paquetes</li>
+                        </ul>
+                        
+                        <h5>📚 Enlaces oficiales y recursos clave:</h5>
+                        <ul>
+                            <li><strong><a href="https://docs.flutter.dev/" target="_blank">Flutter Documentation</a>:</strong> Documentación oficial completa con guías de inicio, tutoriales paso a paso, conceptos fundamentales, layouts, widgets, y mejores prácticas para desarrollo multiplataforma.</li>
+                            <li><strong><a href="https://api.flutter.dev/" target="_blank">Flutter API Reference</a>:</strong> Referencia completa de la API con documentación detallada de todos los widgets, clases, métodos, y bibliotecas del framework Flutter y Dart.</li>
+                            <li><strong><a href="https://docs.flutter.dev/ui/widgets" target="_blank">Widget Catalog</a>:</strong> Catálogo visual interactivo con más de 100 widgets organizados por categorías: Material Design, Cupertino, layouts, animaciones, y componentes personalizados.</li>
+                            <li><strong><a href="https://docs.flutter.dev/get-started/fundamentals/widgets" target="_blank">Widget Fundamentals</a>:</strong> Guía fundamental sobre la arquitectura de widgets, composición, estado, ciclo de vida, y patrones de desarrollo en Flutter con ejemplos prácticos de código.</li>
+                            <li><strong><a href="https://dart.dev/" target="_blank">Dart Language</a>:</strong> Documentación oficial del lenguaje Dart con sintaxis, características del lenguaje, null safety, programación asíncrona, y herramientas de desarrollo.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="installation-guide">
+                    <h3><i class="fas fa-download"></i> Instalación de Flutter</h3>
+                    
+                    <div class="os-tabs">
+                        <button class="os-tab-btn active" data-os="flutter-windows">Windows</button>
+                        <button class="os-tab-btn" data-os="flutter-macos">macOS</button>
+                        <button class="os-tab-btn" data-os="flutter-linux">Linux</button>
+                    </div>
+
+                    <div class="os-content">
+                        <div id="flutter-windows" class="os-tab-content active">
+                            <h4><i class="fab fa-windows"></i> Instalación en Windows</h4>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span>Instalación Flutter - Windows</span>
+                                    <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                                </div>
+                                <pre><code># Descargar Flutter SDK desde https://flutter.dev/docs/get-started/install/windows
+# Extraer en C:\flutter
+
+# Agregar al PATH del sistema
+PATH=%PATH%;C:\flutter\bin
+
+# Verificar instalación
+flutter doctor</code></pre>
+                            </div>
+                        </div>
+
+                        <div id="flutter-macos" class="os-tab-content">
+                            <h4><i class="fab fa-apple"></i> Instalación en macOS</h4>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span>Instalación Flutter - macOS</span>
+                                    <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                                </div>
+                                <pre><code># Descargar Flutter SDK
+curl -O https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_xxx-stable.zip
+
+# Extraer y mover
+unzip flutter_macos_xxx-stable.zip
+sudo mv flutter /usr/local/
+
+# Agregar al PATH en ~/.zshrc
+export PATH="$PATH:/usr/local/flutter/bin"
+
+# Verificar instalación
+flutter doctor</code></pre>
+                            </div>
+                        </div>
+
+                        <div id="flutter-linux" class="os-tab-content">
+                            <h4><i class="fab fa-linux"></i> Instalación en Linux</h4>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span>Instalación Flutter - Linux</span>
+                                    <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                                </div>
+                                <pre><code># Descargar Flutter SDK
+wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_xxx-stable.tar.xz
+
+# Extraer
+tar xf flutter_linux_xxx-stable.tar.xz
+sudo mv flutter /opt/
+
+# Agregar al PATH en ~/.bashrc
+export PATH="$PATH:/opt/flutter/bin"
+
+# Verificar instalación
+flutter doctor</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flutter-doctor">
+                    <h3><i class="fas fa-stethoscope"></i> Uso de Flutter Doctor</h3>
+                    <p>Flutter Doctor es una herramienta que verifica tu entorno de desarrollo y muestra un reporte del estado de tu instalación de Flutter.</p>
+                    
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Comandos Flutter Doctor</span>
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                        </div>
+                        <pre><code># Verificar estado general
+flutter doctor
+
+# Verificar con detalles verbosos
+flutter doctor -v
+
+# Aceptar licencias de Android
+flutter doctor --android-licenses
+
+# Verificar dispositivos conectados
+flutter devices</code></pre>
+                    </div>
+
+                    <div class="doctor-checklist">
+                        <h4><i class="fas fa-check-square"></i> Checklist Flutter Doctor</h4>
+                        <ul class="checklist">
+                            <li><i class="fas fa-check"></i> Flutter (Channel stable, versión actual)</li>
+                            <li><i class="fas fa-check"></i> Android toolchain - develop for Android devices</li>
+                            <li><i class="fas fa-check"></i> Chrome - develop for the web</li>
+                            <li><i class="fas fa-check"></i> Android Studio (version 2022.x)</li>
+                            <li><i class="fas fa-check"></i> VS Code (version 1.x)</li>
+                            <li><i class="fas fa-check"></i> Connected device (Android emulator/device)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="first-project">
+                    <h3><i class="fas fa-rocket"></i> Primer Proyecto Flutter</h3>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Crear y Ejecutar Proyecto Flutter</span>
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                        </div>
+                        <pre><code># Crear nuevo proyecto
+flutter create mi_primera_app_flutter
+
+# Navegar al directorio
+cd mi_primera_app_flutter
+
+# Ejecutar en emulador/dispositivo
+flutter run
+
+# Ejecutar en modo debug
+flutter run --debug
+
+# Ejecutar en modo release
+flutter run --release
+
+# Hot reload durante desarrollo
+# Presionar 'r' en la terminal para hot reload
+# Presionar 'R' para hot restart</code></pre>
+                    </div>
+                </div>
+
+                <div class="resources">
+                    <h3><i class="fas fa-link"></i> Enlaces Oficiales</h3>
+                    <div class="links-grid">
+                        <a href="https://flutter.dev/" target="_blank" class="resource-link">
+                            <i class="fas fa-home"></i>
+                            <span>Sitio Oficial Flutter</span>
+                        </a>
+                        <a href="https://flutter.dev/docs/get-started/install" target="_blank" class="resource-link">
+                            <i class="fas fa-download"></i>
+                            <span>Guía de Instalación</span>
+                        </a>
+                        <a href="https://api.flutter.dev/" target="_blank" class="resource-link">
+                            <i class="fas fa-code"></i>
+                            <span>API Reference</span>
+                        </a>
+                        <a href="https://pub.dev/" target="_blank" class="resource-link">
+                            <i class="fas fa-cube"></i>
+                            <span>Pub.dev (Packages)</span>
+                        </a>
+                        <a href="https://flutter.dev/docs/cookbook" target="_blank" class="resource-link">
+                            <i class="fas fa-book"></i>
+                            <span>Cookbook (Ejemplos)</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- React Native -->
+            <section id="react-native" class="tab-content">
+                <h2><i class="fab fa-react"></i> React Native</h2>
+                
+                <div class="explanation-card">
+                    <h4>🔍 ¿Qué es React Native?</h4>
+                    <p>Framework de Facebook que permite desarrollar aplicaciones móviles nativas usando <strong>React y JavaScript</strong>. Comparte código entre iOS y Android mientras mantiene el rendimiento nativo.</p>
+                    <div class="tech-highlights">
+                        <h5>🎯 Expo: El ecosistema recomendado 2024:</h5>
+                        <ul>
+                            <li><strong>Expo SDK 52:</strong> Nuevas librerías para video, audio e imágenes</li>
+                            <li><strong>React Native 0.76:</strong> Nueva arquitectura estable (JSI) para mejor rendimiento</li>
+                            <li><strong>File-based routing:</strong> Navegación simplificada estilo Next.js</li>
+                            <li><strong>TypeScript nativo:</strong> Soporte completo sin configuración adicional</li>
+                            <li><strong>Fast Refresh:</strong> Recarga instantánea durante desarrollo</li>
+                            <li><strong>Expo Application Services:</strong> Build y deploy automatizado</li>
+                        </ul>
+                        
+                        <h5>📚 Enlaces oficiales y recursos clave:</h5>
+                        <ul>
+                            <li><strong><a href="https://reactnative.dev/" target="_blank">React Native Documentation</a>:</strong> Documentación oficial completa con guías de instalación, conceptos fundamentales, componentes nativos, APIs, navegación, y mejores prácticas de desarrollo.</li>
+                            <li><strong><a href="https://expo.dev/" target="_blank">Expo Platform</a>:</strong> Plataforma completa para desarrollo React Native con herramientas, servicios de build, distribución, actualizaciones OTA, y ecosistema de librerías nativas.</li>
+                            <li><strong><a href="https://docs.expo.dev/" target="_blank">Expo Documentation</a>:</strong> Documentación detallada del SDK de Expo, guías de desarrollo, configuración de proyectos, APIs nativas, y servicios de deployment.</li>
+                            <li><strong><a href="https://reactnative.dev/docs/components-and-apis" target="_blank">Components and APIs</a>:</strong> Referencia completa de componentes nativos (View, Text, ScrollView) y APIs del dispositivo (Camera, Location, Storage) con ejemplos de código.</li>
+                            <li><strong><a href="https://reactnavigation.org/" target="_blank">React Navigation</a>:</strong> Biblioteca oficial de navegación con documentación sobre stack, tab, drawer navigation, deep linking, y patrones de navegación avanzados.
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="rn-intro">
+                    <div class="comparison-grid">
+                        <div class="comparison-card">
+                            <h3><i class="fas fa-rocket"></i> Expo CLI</h3>
+                            <p><strong>Recomendado para principiantes</strong></p>
+                            <ul>
+                                <li>Configuración rápida y sencilla</li>
+                                <li>No requiere Android Studio inicialmente</li>
+                                <li>Desarrollo y testing más rápido</li>
+                                <li>Limitaciones en módulos nativos</li>
+                            </ul>
+                        </div>
+                        <div class="comparison-card">
+                            <h3><i class="fas fa-cogs"></i> React Native CLI</h3>
+                            <p><strong>Para desarrollo avanzado</strong></p>
+                            <ul>
+                                <li>Control completo sobre el proyecto</li>
+                                <li>Acceso a módulos nativos</li>
+                                <li>Configuración más compleja</li>
+                                <li>Requiere Android Studio y Xcode</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="environment-setup">
+                    <h3><i class="fas fa-cog"></i> Preparación del Entorno</h3>
+                    
+                    <div class="setup-steps">
+                        <div class="step">
+                            <h4><i class="fas fa-step-forward"></i> 1. Instalar Node.js</h4>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span>Instalación Node.js</span>
+                                    <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                                </div>
+                                <pre><code># Descargar desde https://nodejs.org/ (versión LTS)
+# Verificar instalación
+node --version
+npm --version
+
+# Instalar Yarn (opcional pero recomendado)
+npm install -g yarn</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <h4><i class="fas fa-step-forward"></i> 2. Instalar JDK 17</h4>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span>Instalación JDK 17</span>
+                                    <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                                </div>
+                                <pre><code># Windows: Descargar desde Oracle o usar Chocolatey
+choco install openjdk17
+
+# macOS: Usar Homebrew
+brew install openjdk@17
+
+# Linux: Usar package manager
+sudo apt install openjdk-17-jdk  # Ubuntu/Debian
+sudo yum install java-17-openjdk-devel  # CentOS/RHEL
+
+# Verificar instalación
+java -version</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <h4><i class="fas fa-step-forward"></i> 3. Configurar Android Studio</h4>
+                            <p>Instalar Android Studio siguiendo las instrucciones de la sección "Android Nativo"</p>
+                        </div>
+
+                        <div class="step">
+                            <h4><i class="fas fa-step-forward"></i> 4. Instalar React Native CLI</h4>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span>Instalación React Native CLI</span>
+                                    <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                                </div>
+                                <pre><code># Para Expo CLI (recomendado para principiantes)
+npm install -g @expo/cli
+
+# Para React Native CLI (desarrollo avanzado)
+npm install -g @react-native-community/cli</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="metro-bundler">
+                    <h3><i class="fas fa-subway"></i> Metro Bundler</h3>
+                    <p>Metro es el bundler de JavaScript para React Native. Se encarga de compilar y servir tu código JavaScript.</p>
+                    
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Comandos Metro Bundler</span>
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                        </div>
+                        <pre><code># Iniciar Metro Bundler
+npx react-native start
+
+# Limpiar caché de Metro
+npx react-native start --reset-cache
+
+# Ejecutar en Android
+npx react-native run-android
+
+# Ejecutar en iOS (solo macOS)
+npx react-native run-ios</code></pre>
+                    </div>
+                </div>
+
+                <div class="project-creation">
+                    <h3><i class="fas fa-rocket"></i> Crear Primer Proyecto</h3>
+                    
+                    <div class="project-tabs">
+                        <button class="project-tab-btn active" data-project="expo">Con Expo</button>
+                        <button class="project-tab-btn" data-project="cli">Con React Native CLI</button>
+                    </div>
+
+                    <div class="project-content">
+                        <div id="expo" class="project-tab-content active">
+                            <h4><i class="fas fa-rocket"></i> Proyecto con Expo</h4>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span>Crear Proyecto Expo</span>
+                                    <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                                </div>
+                                <pre><code># Crear nuevo proyecto
+npx create-expo-app MiAppExpo
+
+# Navegar al directorio
+cd MiAppExpo
+
+# Iniciar servidor de desarrollo
+npx expo start
+
+# Ejecutar en Android
+npx expo run:android
+
+# Ejecutar en iOS (solo macOS)
+npx expo run:ios
+
+# Instalar Expo Go en tu dispositivo para testing</code></pre>
+                            </div>
+                        </div>
+
+                        <div id="cli" class="project-tab-content">
+                            <h4><i class="fas fa-terminal"></i> Proyecto con React Native CLI</h4>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span>Crear Proyecto React Native CLI</span>
+                                    <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                                </div>
+                                <pre><code># Crear nuevo proyecto
+npx react-native@latest init MiAppRN
+
+# Navegar al directorio
+cd MiAppRN
+
+# Iniciar Metro Bundler
+npx react-native start
+
+# En otra terminal, ejecutar en Android
+npx react-native run-android
+
+# Ejecutar en iOS (solo macOS)
+npx react-native run-ios</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resources">
+                    <h3><i class="fas fa-link"></i> Enlaces Oficiales</h3>
+                    <div class="links-grid">
+                        <a href="https://reactnative.dev/" target="_blank" class="resource-link">
+                            <i class="fas fa-home"></i>
+                            <span>React Native Official</span>
+                        </a>
+                        <a href="https://expo.dev/" target="_blank" class="resource-link">
+                            <i class="fas fa-rocket"></i>
+                            <span>Expo Platform</span>
+                        </a>
+                        <a href="https://reactnative.dev/docs/environment-setup" target="_blank" class="resource-link">
+                            <i class="fas fa-cog"></i>
+                            <span>Environment Setup</span>
+                        </a>
+                        <a href="https://reactnative.dev/docs/getting-started" target="_blank" class="resource-link">
+                            <i class="fas fa-play"></i>
+                            <span>Getting Started</span>
+                        </a>
+                        <a href="https://github.com/jondot/awesome-react-native" target="_blank" class="resource-link">
+                            <i class="fas fa-star"></i>
+                            <span>Awesome React Native</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- React + Capacitor -->
+            <section id="capacitor" class="tab-content">
+                <h2><i class="fas fa-globe"></i> React + Capacitor</h2>
+                
+                <div class="explanation-card">
+                    <h4>🔍 ¿Qué es Capacitor?</h4>
+                    <p>Capacitor es un runtime multiplataforma nativo que permite a las tecnologías web (HTML, CSS, JavaScript) construir aplicaciones nativas para iOS, Android y PWA. Es la <strong>alternativa moderna a Cordova</strong> con mejor rendimiento y compatibilidad.</p>
+                    <div class="tech-highlights">
+                        <h5>⚡ Características clave de Capacitor:</h5>
+                        <ul>
+                            <li><strong>Framework agnóstico:</strong> Compatible con React, Angular, Vue y vanilla JS</li>
+                            <li><strong>APIs nativas:</strong> Acceso completo a funcionalidades del dispositivo</li>
+                            <li><strong>Rendimiento mejorado:</strong> Mejor que Cordova con estándares web modernos</li>
+                            <li><strong>Plugins nativos:</strong> Ecosistema robusto de plugins de terceros</li>
+                            <li><strong>Live Reload:</strong> Desarrollo rápido con recarga en tiempo real</li>
+                            <li><strong>PWA ready:</strong> Soporte completo para Progressive Web Apps</li>
+                        </ul>
+                        
+                        <h5>📚 Enlaces oficiales y recursos clave:</h5>
+                        <ul>
+                            <li><strong><a href="https://capacitorjs.com/" target="_blank">Capacitor Official Site</a>:</strong> Sitio oficial con introducción al framework, comparaciones con otras tecnologías, casos de uso, y guías de inicio rápido para desarrolladores web.</li>
+                            <li><strong><a href="https://capacitorjs.com/docs" target="_blank">Capacitor Documentation</a>:</strong> Documentación completa con guías de instalación, configuración de proyectos, APIs nativas, desarrollo de plugins, y deployment para iOS/Android.</li>
+                            <li><strong><a href="https://capacitorjs.com/docs/apis" target="_blank">Native APIs</a>:</strong> Referencia detallada de APIs nativas disponibles: Camera, Geolocation, Filesystem, Device, Push Notifications, y más de 30 APIs del dispositivo.</li>
+                            <li><strong><a href="https://capacitorjs.com/docs/plugins" target="_blank">Plugin Development</a>:</strong> Guía completa para crear plugins personalizados, integrar código nativo iOS/Android, y contribuir al ecosistema de plugins de Capacitor.</li>
+                            <li><strong><a href="https://ionic.io/" target="_blank">Ionic Platform</a>:</strong> Plataforma complementaria con componentes UI, servicios de build, analytics, y herramientas de desarrollo para apps Capacitor (opcional pero recomendado).
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="hybrid-explanation">
+                    <h3><i class="fas fa-info-circle"></i> ¿Qué son las Apps Híbridas?</h3>
+                    <div class="explanation-card">
+                        <p>Las aplicaciones híbridas combinan tecnologías web (HTML, CSS, JavaScript) con capacidades nativas del dispositivo. Capacitor permite que una aplicación web React se ejecute como una app nativa en iOS y Android.</p>
+                        
+                        <div class="hybrid-benefits">
+                            <h4><i class="fas fa-check-circle"></i> Ventajas de Capacitor</h4>
+                            <ul>
+                                <li>Reutilización del código web existente</li>
+                                <li>Acceso a APIs nativas del dispositivo</li>
+                                <li>Desarrollo más rápido para equipos web</li>
+                                <li>Mantenimiento de una sola base de código</li>
+                                <li>Ecosistema de plugins robusto</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="installation-guide">
+                    <h3><i class="fas fa-download"></i> Instalación de Capacitor</h3>
+                    
+                    <div class="step-by-step">
+                        <div class="step">
+                            <h4><i class="fas fa-step-forward"></i> 1. Crear Proyecto React</h4>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span>Crear App React</span>
+                                    <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                                </div>
+                                <pre><code># Crear nueva app React
+npx create-react-app mi-app-capacitor
+cd mi-app-capacitor
+
+# O usar Vite (más rápido)
+npm create vite@latest mi-app-capacitor -- --template react
+cd mi-app-capacitor
+npm install</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <h4><i class="fas fa-step-forward"></i> 2. Instalar Capacitor</h4>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span>Instalación Capacitor</span>
+                                    <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                                </div>
+                                <pre><code># Instalar Capacitor Core y CLI
+npm install @capacitor/core
+npm install -D @capacitor/cli
+
+# Inicializar Capacitor
+npx cap init
+
+# Instalar plataformas
+npm install @capacitor/android @capacitor/ios</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <h4><i class="fas fa-step-forward"></i> 3. Configurar Capacitor</h4>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span>Configuración capacitor.config.ts</span>
+                                    <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                                </div>
+                                <pre><code>import { CapacitorConfig } from '@capacitor/cli';
+
+const config: CapacitorConfig = {
+  appId: 'com.ejemplo.miapp',
+  appName: 'Mi App Capacitor',
+  webDir: 'dist', // 'build' para Create React App
+  server: {
+    androidScheme: 'https'
+  }
+};
+
+export default config;</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <h4><i class="fas fa-step-forward"></i> 4. Agregar Plataformas</h4>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span>Agregar Plataformas Android/iOS</span>
+                                    <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                                </div>
+                                <pre><code># Construir la app web
+npm run build
+
+# Agregar plataforma Android
+npx cap add android
+
+# Agregar plataforma iOS (solo en macOS)
+npx cap add ios
+
+# Sincronizar cambios
+npx cap sync</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="android-studio-sync">
+                    <h3><i class="fas fa-sync-alt"></i> Sincronización con Android Studio</h3>
+                    
+                    <div class="sync-process">
+                        <h4><i class="fas fa-mobile-alt"></i> Proceso de Sincronización</h4>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>Comandos de Sincronización</span>
+                                <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            </div>
+                            <pre><code># Después de cambios en el código web
+npm run build
+npx cap sync
+
+# Abrir en Android Studio
+npx cap open android
+
+# Ejecutar en dispositivo/emulador
+npx cap run android
+
+# Para desarrollo con live reload
+npx cap run android --livereload --external</code></pre>
+                        </div>
+                        
+                        <div class="sync-tips">
+                            <h4><i class="fas fa-lightbulb"></i> Tips de Sincronización</h4>
+                            <ul>
+                                <li>Ejecutar <code>npm run build</code> antes de <code>cap sync</code></li>
+                                <li>Usar <code>cap sync</code> después de instalar nuevos plugins</li>
+                                <li>Verificar que el <code>webDir</code> en la configuración sea correcto</li>
+                                <li>Usar <code>--livereload</code> para desarrollo más rápido</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="plugins-section">
+                    <h3><i class="fas fa-plug"></i> Uso de Plugins</h3>
+                    
+                    <div class="popular-plugins">
+                        <h4><i class="fas fa-star"></i> Plugins Populares</h4>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>Instalación de Plugins Comunes</span>
+                                <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            </div>
+                            <pre><code># Camera
+npm install @capacitor/camera
+
+# Geolocation
+npm install @capacitor/geolocation
+
+# Storage
+npm install @capacitor/preferences
+
+# Device Info
+npm install @capacitor/device
+
+# Network
+npm install @capacitor/network
+
+# Después de instalar plugins
+npx cap sync</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="plugin-example">
+                        <h4><i class="fas fa-code"></i> Ejemplo de Uso - Camera</h4>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>Uso del Plugin Camera</span>
+                                <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            </div>
+                            <pre><code>import { Camera, CameraResultType } from '@capacitor/camera';
+
+const takePicture = async () => {
+  const image = await Camera.getPhoto({
+    quality: 90,
+    allowEditing: true,
+    resultType: CameraResultType.Uri
+  });
+  
+  // image.webPath contendrá la ruta de la imagen
+  const imageUrl = image.webPath;
+};</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resources">
+                    <h3><i class="fas fa-link"></i> Enlaces Oficiales</h3>
+                    <div class="links-grid">
+                        <a href="https://capacitorjs.com/" target="_blank" class="resource-link">
+                            <i class="fas fa-home"></i>
+                            <span>Capacitor Official</span>
+                        </a>
+                        <a href="https://capacitorjs.com/docs/getting-started" target="_blank" class="resource-link">
+                            <i class="fas fa-play"></i>
+                            <span>Getting Started</span>
+                        </a>
+                        <a href="https://capacitorjs.com/docs/apis" target="_blank" class="resource-link">
+                            <i class="fas fa-plug"></i>
+                            <span>Core Plugins</span>
+                        </a>
+                        <a href="https://capacitorjs.com/docs/android" target="_blank" class="resource-link">
+                            <i class="fab fa-android"></i>
+                            <span>Android Development</span>
+                        </a>
+                        <a href="https://capacitorjs.com/community" target="_blank" class="resource-link">
+                            <i class="fas fa-users"></i>
+                            <span>Community Plugins</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- .NET MAUI -->
+            <section id="maui" class="tab-content">
+                <h2><i class="fab fa-microsoft"></i> .NET MAUI (C#/.NET)</h2>
+                
+                <div class="explanation-card">
+                    <h4>🔍 ¿Qué es .NET MAUI?</h4>
+                    <p>.NET Multi-platform App UI (MAUI) es la <strong>evolución de Xamarin.Forms</strong> que permite crear aplicaciones nativas multiplataforma usando C# y .NET para Android, iOS, macOS y Windows desde una sola base de código.</p>
+                    <div class="tech-highlights">
+                        <h5>🚀 Características destacadas 2024:</h5>
+                        <ul>
+                            <li><strong>Sucesor de Xamarin:</strong> Soporte de Xamarin terminó en mayo 2024</li>
+                            <li><strong>Sistema de proyecto único:</strong> Una solución para todas las plataformas</li>
+                            <li><strong>Hot Reload mejorado:</strong> Desarrollo rápido con recarga en caliente</li>
+                            <li><strong>APIs multiplataforma:</strong> Acceso unificado a funcionalidades del dispositivo</li>
+                            <li><strong>Rendimiento nativo:</strong> Compilación a código nativo en cada plataforma</li>
+                            <li><strong>Integración con .NET:</strong> Ecosistema completo de Microsoft</li>
+                        </ul>
+                        
+                        <h5>📚 Enlaces oficiales y recursos clave:</h5>
+                        <ul>
+                            <li><strong><a href="https://learn.microsoft.com/en-us/dotnet/maui/" target="_blank">.NET MAUI Documentation</a>:</strong> Documentación oficial de Microsoft Learn con guías completas de desarrollo, tutoriales paso a paso, arquitectura, controles UI, y mejores prácticas.</li>
+                            <li><strong><a href="https://learn.microsoft.com/en-us/dotnet/api/?view=net-maui-8.0" target="_blank">.NET MAUI API Reference</a>:</strong> Referencia completa de la API con documentación detallada de clases, métodos, propiedades, y namespaces del framework .NET MAUI.</li>
+                            <li><strong><a href="https://learn.microsoft.com/en-us/dotnet/communitytoolkit/maui/" target="_blank">Community Toolkit</a>:</strong> Conjunto de herramientas y controles adicionales desarrollados por la comunidad para extender las capacidades de .NET MAUI con animaciones, efectos, y comportamientos.</li>
+                            <li><strong><a href="https://learn.microsoft.com/en-us/training/paths/build-apps-with-dotnet-maui/" target="_blank">Microsoft Learn Training</a>:</strong> Ruta de aprendizaje oficial con módulos interactivos, ejercicios prácticos, y proyectos para dominar el desarrollo con .NET MAUI.</li>
+                            <li><strong><a href="https://github.com/dotnet/maui" target="_blank">GitHub Repository</a>:</strong> Repositorio oficial de código fuente, issues, roadmap, ejemplos de código, y contribuciones de la comunidad para .NET MAUI.
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="maui-intro">
+                    <h3><i class="fas fa-info-circle"></i> ¿Qué es .NET MAUI?</h3>
+                    <div class="explanation-card">
+                        <p>.NET Multi-platform App UI (MAUI) es la evolución de Xamarin.Forms que permite crear aplicaciones nativas multiplataforma usando C# y .NET para Android, iOS, macOS y Windows.</p>
+                        
+                        <div class="maui-benefits">
+                            <h4><i class="fas fa-check-circle"></i> Ventajas de .NET MAUI</h4>
+                            <ul>
+                                <li>Un proyecto, múltiples plataformas</li>
+                                <li>Rendimiento nativo en todas las plataformas</li>
+                                <li>Acceso completo a APIs nativas</li>
+                                <li>Ecosistema robusto de .NET</li>
+                                <li>Hot Reload para desarrollo rápido</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="installation-guide">
+                    <h3><i class="fas fa-download"></i> Instalación de Visual Studio</h3>
+                    
+                    <div class="ide-tabs">
+                        <button class="ide-tab-btn active" data-ide="vs">Visual Studio</button>
+                        <button class="ide-tab-btn" data-ide="vscode">VS Code</button>
+                    </div>
+
+                    <div class="ide-content">
+                        <div id="vs" class="ide-tab-content active">
+                            <h4><i class="fas fa-download"></i> Visual Studio 2022</h4>
+                            <div class="step-by-step">
+                                <div class="step">
+                                    <h5><i class="fas fa-step-forward"></i> 1. Descargar Visual Studio</h5>
+                                    <p>Descargar Visual Studio 2022 Community (gratuito) desde <a href="https://visualstudio.microsoft.com/" target="_blank">visualstudio.microsoft.com</a></p>
+                                </div>
+                                
+                                <div class="step">
+                                    <h5><i class="fas fa-step-forward"></i> 2. Seleccionar Workloads</h5>
+                                    <div class="workloads-list">
+                                        <h6><i class="fas fa-check-square"></i> Workloads Requeridos:</h6>
+                                        <ul>
+                                            <li><strong>.NET Multi-platform App UI development</strong></li>
+                                            <li>Mobile development with .NET (incluye Android SDK)</li>
+                                            <li>ASP.NET and web development (opcional)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="step">
+                                    <h5><i class="fas fa-step-forward"></i> 3. Componentes Individuales</h5>
+                                    <ul>
+                                        <li>Android SDK setup (API 33+)</li>
+                                        <li>Android SDK build-tools</li>
+                                        <li>Android Emulator</li>
+                                        <li>.NET 8.0 Runtime</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="vscode" class="ide-tab-content">
+                            <h4><i class="fas fa-code"></i> Visual Studio Code</h4>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span>Instalación .NET SDK y VS Code</span>
+                                    <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                                </div>
+                                <pre><code># 1. Instalar .NET 8 SDK
+# Descargar desde https://dotnet.microsoft.com/download
+
+# 2. Verificar instalación
+dotnet --version
+
+# 3. Instalar workload de MAUI
+dotnet workload install maui
+
+# 4. Instalar extensiones de VS Code:
+# - C# Dev Kit
+# - .NET MAUI Extension Pack</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="first-project">
+                    <h3><i class="fas fa-rocket"></i> Crear Primera App MAUI</h3>
+                    
+                    <div class="creation-methods">
+                        <div class="method-tabs">
+                            <button class="method-tab-btn active" data-method="vs-gui">Visual Studio (GUI)</button>
+                            <button class="method-tab-btn" data-method="cli">Línea de Comandos</button>
+                        </div>
+
+                        <div class="method-content">
+                            <div id="vs-gui" class="method-tab-content active">
+                                <h4><i class="fas fa-mouse-pointer"></i> Crear con Visual Studio</h4>
+                                <ol>
+                                    <li>Abrir Visual Studio 2022</li>
+                                    <li>Click en "Create a new project"</li>
+                                    <li>Buscar ".NET MAUI App" template</li>
+                                    <li>Configurar:
+                                        <ul>
+                                            <li>Project name: MiPrimeraAppMAUI</li>
+                                            <li>Location: Elegir carpeta</li>
+                                            <li>Framework: .NET 8.0</li>
+                                        </ul>
+                                    </li>
+                                    <li>Click "Create"</li>
+                                </ol>
+                            </div>
+
+                            <div id="cli" class="method-tab-content">
+                                <h4><i class="fas fa-terminal"></i> Crear con CLI</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span>Crear Proyecto MAUI con CLI</span>
+                                        <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                                    </div>
+                                    <pre><code># Crear nuevo proyecto MAUI
+dotnet new maui -n MiPrimeraAppMAUI
+
+# Navegar al directorio
+cd MiPrimeraAppMAUI
+
+# Restaurar dependencias
+dotnet restore
+
+# Ejecutar en Android
+dotnet build -t:Run -f net8.0-android
+
+# Ejecutar en Windows (solo en Windows)
+dotnet build -t:Run -f net8.0-windows10.0.19041.0</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-structure">
+                    <h3><i class="fas fa-folder-tree"></i> Estructura del Proyecto</h3>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Estructura Típica de Proyecto MAUI</span>
+                        </div>
+                        <pre><code>MiPrimeraAppMAUI/
+├── Platforms/
+│   ├── Android/
+│   ├── iOS/
+│   ├── MacCatalyst/
+│   └── Windows/
+├── Resources/
+│   ├── Images/
+│   ├── Fonts/
+│   └── Styles/
+├── Views/
+├── ViewModels/
+├── Models/
+├── Services/
+├── App.xaml
+├── App.xaml.cs
+├── AppShell.xaml
+├── MainPage.xaml
+├── MainPage.xaml.cs
+└── MauiProgram.cs</code></pre>
+                    </div>
+                </div>
+
+                <div class="development-tips">
+                    <h3><i class="fas fa-lightbulb"></i> Tips de Desarrollo</h3>
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <h4><i class="fas fa-fire"></i> Hot Reload</h4>
+                            <p>MAUI soporta Hot Reload para XAML y C#. Los cambios se reflejan inmediatamente sin recompilar.</p>
+                        </div>
+                        <div class="tip-card">
+                            <h4><i class="fas fa-mobile-alt"></i> Emuladores</h4>
+                            <p>Usar Android Emulator para testing. Configurar AVD con API 33+ para mejor compatibilidad.</p>
+                        </div>
+                        <div class="tip-card">
+                            <h4><i class="fas fa-code"></i> MVVM Pattern</h4>
+                            <p>Usar el patrón Model-View-ViewModel para separar lógica de negocio de la UI.</p>
+                        </div>
+                        <div class="tip-card">
+                            <h4><i class="fas fa-package"></i> NuGet Packages</h4>
+                            <p>Aprovechar el ecosistema de NuGet para funcionalidades adicionales.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resources">
+                    <h3><i class="fas fa-link"></i> Enlaces Oficiales</h3>
+                    <div class="links-grid">
+                        <a href="https://dotnet.microsoft.com/apps/maui" target="_blank" class="resource-link">
+                            <i class="fas fa-home"></i>
+                            <span>.NET MAUI Official</span>
+                        </a>
+                        <a href="https://docs.microsoft.com/dotnet/maui/" target="_blank" class="resource-link">
+                            <i class="fas fa-book"></i>
+                            <span>Documentación MAUI</span>
+                        </a>
+                        <a href="https://github.com/dotnet/maui" target="_blank" class="resource-link">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub Repository</span>
+                        </a>
+                        <a href="https://docs.microsoft.com/dotnet/maui/get-started/installation" target="_blank" class="resource-link">
+                            <i class="fas fa-download"></i>
+                            <span>Installation Guide</span>
+                        </a>
+                        <a href="https://github.com/jsuarezruiz/awesome-dotnet-maui" target="_blank" class="resource-link">
+                            <i class="fas fa-star"></i>
+                            <span>Awesome .NET MAUI</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Troubleshooting -->
+            <section id="troubleshooting" class="tab-content">
+                <h2><i class="fas fa-tools"></i> Checklist y Troubleshooting</h2>
+                
+                <div class="environment-checklist">
+                    <h3><i class="fas fa-check-square"></i> Checklist de Variables de Entorno</h3>
+                    
+                    <div class="checklist-grid">
+                        <div class="checklist-card">
+                            <h4><i class="fab fa-android"></i> Android Development</h4>
+                            <ul class="checklist">
+                                <li><i class="fas fa-check"></i> ANDROID_HOME configurado</li>
+                                <li><i class="fas fa-check"></i> JAVA_HOME apuntando a JDK 17</li>
+                                <li><i class="fas fa-check"></i> platform-tools en PATH</li>
+                                <li><i class="fas fa-check"></i> Android SDK instalado</li>
+                                <li><i class="fas fa-check"></i> AVD creado y funcional</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="checklist-card">
+                            <h4><i class="fas fa-feather-alt"></i> Flutter</h4>
+                            <ul class="checklist">
+                                <li><i class="fas fa-check"></i> Flutter bin en PATH</li>
+                                <li><i class="fas fa-check"></i> flutter doctor sin errores</li>
+                                <li><i class="fas fa-check"></i> Android licenses aceptadas</li>
+                                <li><i class="fas fa-check"></i> IDE plugins instalados</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="checklist-card">
+                            <h4><i class="fab fa-react"></i> React Native</h4>
+                            <ul class="checklist">
+                                <li><i class="fas fa-check"></i> Node.js versión LTS</li>
+                                <li><i class="fas fa-check"></i> JDK 17 instalado</li>
+                                <li><i class="fas fa-check"></i> Android Studio configurado</li>
+                                <li><i class="fas fa-check"></i> Metro Bundler funcional</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="checklist-card">
+                            <h4><i class="fab fa-microsoft"></i> .NET MAUI</h4>
+                            <ul class="checklist">
+                                <li><i class="fas fa-check"></i> .NET 8 SDK instalado</li>
+                                <li><i class="fas fa-check"></i> MAUI workload instalado</li>
+                                <li><i class="fas fa-check"></i> Visual Studio 2022</li>
+                                <li><i class="fas fa-check"></i> Android SDK configurado</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="emulator-troubleshooting">
+                    <h3><i class="fas fa-mobile-alt"></i> Problemas Comunes con Emuladores</h3>
+                    
+                    <div class="troubleshooting-section">
+                        <h4><i class="fas fa-exclamation-triangle"></i> Emulador Android No Inicia</h4>
+                        <div class="solution">
+                            <h5>Posibles Soluciones:</h5>
+                            <ul>
+                                <li>Verificar que la virtualización esté habilitada en BIOS</li>
+                                <li>Aumentar RAM asignada al AVD (mínimo 2GB)</li>
+                                <li>Usar imagen x86_64 en lugar de ARM</li>
+                                <li>Deshabilitar Hyper-V en Windows</li>
+                            </ul>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span>Comandos de Diagnóstico</span>
+                                    <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                                </div>
+                                <pre><code># Listar AVDs disponibles
+avd list
+
+# Iniciar emulador desde línea de comandos
+emulator -avd Pixel_4_API_33
+
+# Verificar dispositivos conectados
+adb devices</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="common-errors">
+                    <h3><i class="fas fa-bug"></i> Errores Comunes y Soluciones</h3>
+                    
+                    <div class="error-accordion">
+                        <div class="error-item">
+                            <h4><i class="fas fa-times-circle"></i> Error de Gradle</h4>
+                            <div class="error-content">
+                                <p><strong>Error:</strong> "Could not resolve all dependencies"</p>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span>Solución Gradle</span>
+                                        <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                                    </div>
+                                    <pre><code># Limpiar cache de Gradle
+./gradlew clean
+
+# En Windows
+gradlew.bat clean
+
+# Eliminar carpeta .gradle y rebuild
+rm -rf ~/.gradle/caches
+./gradlew build</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="error-item">
+                            <h4><i class="fas fa-times-circle"></i> Error de JDK</h4>
+                            <div class="error-content">
+                                <p><strong>Error:</strong> "JAVA_HOME is not set"</p>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span>Configurar JAVA_HOME</span>
+                                        <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                                    </div>
+                                    <pre><code># Windows
+set JAVA_HOME=C:\Program Files\Java\jdk-17
+
+# macOS/Linux
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
+
+# Verificar
+java -version
+echo $JAVA_HOME</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="error-item">
+                            <h4><i class="fas fa-times-circle"></i> Error de PATH</h4>
+                            <div class="error-content">
+                                <p><strong>Error:</strong> "Command not found"</p>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span>Verificar PATH</span>
+                                        <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                                    </div>
+                                    <pre><code># Verificar PATH actual
+echo $PATH
+
+# Windows
+echo %PATH%
+
+# Verificar comandos específicos
+which flutter
+which adb
+which java</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-commands">
+                    <h3><i class="fas fa-terminal"></i> Comandos Clave por Stack</h3>
+                    
+                    <div class="commands-grid">
+                        <div class="command-card">
+                            <h4><i class="fab fa-android"></i> Android Nativo</h4>
+                            <div class="code-block">
+                                <pre><code># Listar dispositivos
+adb devices
+
+# Instalar APK
+adb install app.apk
+
+# Ver logs
+adb logcat
+
+# Limpiar datos de app
+adb shell pm clear com.package.name</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="command-card">
+                            <h4><i class="fas fa-feather-alt"></i> Flutter</h4>
+                            <div class="code-block">
+                                <pre><code># Verificar entorno
+flutter doctor
+
+# Crear proyecto
+flutter create app_name
+
+# Ejecutar app
+flutter run
+
+# Limpiar build
+flutter clean</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="command-card">
+                            <h4><i class="fab fa-react"></i> React Native</h4>
+                            <div class="code-block">
+                                <pre><code># Crear proyecto Expo
+npx create-expo-app MyApp
+
+# Crear proyecto RN CLI
+npx react-native init MyApp
+
+# Ejecutar en Android
+npx react-native run-android
+
+# Limpiar Metro cache
+npx react-native start --reset-cache</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="command-card">
+                            <h4><i class="fas fa-globe"></i> Capacitor</h4>
+                            <div class="code-block">
+                                <pre><code># Inicializar Capacitor
+npx cap init
+
+# Agregar plataforma
+npx cap add android
+
+# Sincronizar
+npx cap sync
+
+# Abrir en Android Studio
+npx cap open android</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="command-card">
+                            <h4><i class="fab fa-microsoft"></i> .NET MAUI</h4>
+                            <div class="code-block">
+                                <pre><code># Crear proyecto
+dotnet new maui -n MyApp
+
+# Instalar workload
+dotnet workload install maui
+
+# Ejecutar en Android
+dotnet build -t:Run -f net8.0-android
+
+# Limpiar build
+dotnet clean</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quick-reference">
+                    <h3><i class="fas fa-bookmark"></i> Referencia Rápida</h3>
+                    <div class="reference-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Tecnología</th>
+                                    <th>Comando de Verificación</th>
+                                    <th>Comando de Ejecución</th>
+                                    <th>Puerto por Defecto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Android Studio</td>
+                                    <td><code>adb devices</code></td>
+                                    <td>Run desde IDE</td>
+                                    <td>N/A</td>
+                                </tr>
+                                <tr>
+                                    <td>Flutter</td>
+                                    <td><code>flutter doctor</code></td>
+                                    <td><code>flutter run</code></td>
+                                    <td>N/A</td>
+                                </tr>
+                                <tr>
+                                    <td>React Native</td>
+                                    <td><code>npx react-native doctor</code></td>
+                                    <td><code>npx react-native run-android</code></td>
+                                    <td>8081 (Metro)</td>
+                                </tr>
+                                <tr>
+                                    <td>Expo</td>
+                                    <td><code>expo doctor</code></td>
+                                    <td><code>npx expo start</code></td>
+                                    <td>19000</td>
+                                </tr>
+                                <tr>
+                                    <td>Capacitor</td>
+                                    <td><code>npx cap doctor</code></td>
+                                    <td><code>npx cap run android</code></td>
+                                    <td>N/A</td>
+                                </tr>
+                                <tr>
+                                    <td>.NET MAUI</td>
+                                    <td><code>dotnet --version</code></td>
+                                    <td><code>dotnet build -t:Run</code></td>
+                                    <td>N/A</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Curso de Programación Avanzada - Desarrollo Android. Todos los derechos reservados.</p>
+            <p>Creado con fines educativos para estudiantes de programación.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
